@@ -85,13 +85,7 @@ export const Books = () => {
     <p>Cargando...</p>
   )
 
-  return (
-    <>
-      {
-        books.map((book, index) => language.toLowerCase() === book.tags[0] && <Book key={index} book={book} />)
-      }
-    </>
-  )
+  return books.map((book, index) => language.toLowerCase() === book.tags[0] && <Book key={index} book={book} />)
 }
 
 export default Books;
