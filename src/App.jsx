@@ -1,59 +1,23 @@
-import { useEffect, useState } from "react"
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet } from 'react-router-dom'
+import { useEffect, useState } from 'react';
 
-const TagsList = [
-  {
-    "name": "🏠 Home",
-    "path": "Home"
-  },
-  {
-    "name": "🟨 JavaScript",
-    "path": "JavaScript"
-  },
-  {
-    "name": "🟦 TypeScript",
-    "path": "TypeScript"
-  },
-  {
-    "name": "🐍 Python",
-    "path": "Python"
-  },
-  {
-    "name": "♦️ Ruby",
-    "path": "Ruby"
-  },
-  {
-    "name": "⚙️ Rust",
-    "path": "Rust"
-  },
-  {
-    "name": "🐘 PHP",
-    "path": "PHP"
-  },
-  {
-    "name": "🤔 Haskell",
-    "path": "Haskell"
-  },
-  {
-    "name": "🐹 Golang",
-    "path": "Golang"
-  },
-  {
-    "name": "🤖 Kotlin",
-    "path": "Kotlin"
-  },
-  {
-    "name": "☕ Java",
-    "path": "Java"
-  }
-]
-
-const Tags = () => {
+export const Tags = () => {
 
   const [tags, setTags] = useState([]);
 
+  const loadTags = async () => {
+    const result = await fetch("/tags.json")
+    if (!result.ok) {
+
+      console.log("algo fallo al cargar los tags")
+      return
+    }
+    const json = await result.json()
+    setTags(json.tags)
+  }
+
   useEffect(() => {
-    setTags(TagsList)
+    loadTags()
   }, [])
 
 
@@ -70,6 +34,7 @@ const Tags = () => {
     </>
   )
 }
+
 
 function App() {
 

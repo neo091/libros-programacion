@@ -1,0 +1,48 @@
+{
+  "tags": [
+    {
+      "name": "🏠 Home",
+      "path": "Home"
+    },
+    {
+      "name": "🟨 JavaScript",
+      "path": "JavaScript"
+    },
+    {
+      "name": "🟦 TypeScript",
+      "path": "TypeScript"
+    },
+    {
+      "name": "🐍 Python",
+      "path": "Python"
+    },
+    {
+      "name": "♦️ Ruby",
+      "path": "Ruby"
+    },
+    {
+      "name": "⚙️ Rust",
+      "path": "Rust"
+    },
+    {
+      "name": "🐘 PHP",
+      "path": "PHP"
+    },
+    {
+      "name": "🤔 Haskell",
+      "path": "Haskell"
+    },
+    {
+      "name": "🐹 Golang",
+      "path": "Golang"
+    },
+    {
+      "name": "🤖 Kotlin",
+      "path": "Kotlin"
+    },
+    {
+      "name": "☕ Java",
+      "path": "Java"
+    }
+  ]
+}

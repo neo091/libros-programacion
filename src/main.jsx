@@ -7,12 +7,10 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Books, { loader as BookLoader } from './Books.jsx'
 
-
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-
     children: [
       {
         path: "s/:search"
